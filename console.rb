@@ -93,6 +93,8 @@ customer11 = Customer.new({
 
   customer11.delete()
 
+  customer2.show_screenings()
+
 
 
 
@@ -139,6 +141,7 @@ screening2 = Screening.new({
 screening2.save()
 
 
+
 screening3 = Screening.new({
   'film_id' => film2.id,
   'start_time' => '15:00',
@@ -172,6 +175,8 @@ screening6 = Screening.new({
   'price' => 12,
   })
 screening6.save()
+
+screening6.show_customers()
 
 screening7 = Screening.new({
   'film_id' => film4.id,
