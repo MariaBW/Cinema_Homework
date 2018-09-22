@@ -36,7 +36,9 @@ customer4 = Customer.new({
   })
 customer4.save()
 
-customer4.delete()
+# customer4.delete() - this causes an FK violation error. On Delete Cascade not working??
+
+
 
 
 customer5 = Customer.new({
@@ -83,9 +85,13 @@ customer10 = Customer.new({
   })
 customer10.save()
 
+customer11 = Customer.new({
+  'name' => 'Pure Rando',
+  'funds' => 0
+  })
+  customer11.save()
 
-
-
+  customer11.delete()
 
 
 
@@ -285,6 +291,8 @@ ticket14 = Ticket.new({
   'screening_id' => screening1.id
   })
 ticket14.save()
+
+# ticket14.delete() - this works
 
 
 binding.pry
