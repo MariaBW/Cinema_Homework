@@ -3,28 +3,28 @@ DROP TABLE IF EXISTS screenings;
 DROP TABLE IF EXISTS films;
 DROP TABLE IF EXISTS customers;
 
-CREATE TABLE customers(
+CREATE TABLE customers (
   id SERIAL4 PRIMARY KEY,
   name VARCHAR(255),
   funds INT4
 );
 
 
-CREATE TABLE films(
+CREATE TABLE films (
   id SERIAL4 PRIMARY KEY,
-  title VARCHAR(255),
+  title VARCHAR(255)
 );
 
 
-CREATE TABLE screenings(
+CREATE TABLE screenings (
   id SERIAL4 PRIMARY KEY,
-  film_id INT4 REFERNECES films(id),
+  film_id INT4 REFERENCES films(id),
   start_time VARCHAR(255),
   price INT4
 );
 
 
-CREATE TABLE tickets(
+CREATE TABLE tickets (
   id SERIAL4 PRIMARY KEY,
   customer_id INT4 REFERENCES customers(id),
   screening_id INT4 REFERENCES screenings(id)
