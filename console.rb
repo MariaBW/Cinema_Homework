@@ -129,6 +129,7 @@ screening1 = Screening.new({
   'film_id' => film1.id,
   'start_time' => '15:00',
   'price' => 8,
+  'capacity' => 10
   })
 screening1.save()
 
@@ -137,6 +138,7 @@ screening2 = Screening.new({
   'film_id' => film1.id,
   'start_time' => '20:00',
   'price' => 12,
+  'capacity' => 10
   })
 screening2.save()
 
@@ -146,6 +148,7 @@ screening3 = Screening.new({
   'film_id' => film2.id,
   'start_time' => '15:00',
   'price' => 8,
+  'capacity' => 10
   })
 screening3.save()
 
@@ -157,6 +160,7 @@ screening4 = Screening.new({
   'film_id' => film2.id,
   'start_time' => '20:00',
   'price' => 12,
+  'capacity' => 10
   })
 screening4.save()
 
@@ -165,6 +169,7 @@ screening5 = Screening.new({
   'film_id' => film3.id,
   'start_time' => '15:00',
   'price' => 8,
+  'capacity' => 10
   })
 screening5.save()
 
@@ -173,6 +178,7 @@ screening6 = Screening.new({
   'film_id' => film3.id,
   'start_time' => '20:00',
   'price' => 12,
+  'capacity' => 10
   })
 screening6.save()
 
@@ -182,6 +188,7 @@ screening7 = Screening.new({
   'film_id' => film4.id,
   'start_time' => '15:00',
   'price' => 8,
+  'capacity' => 10
   })
 screening7.save()
 
@@ -190,6 +197,7 @@ screening8 = Screening.new({
   'film_id' => film4.id,
   'start_time' => '20:00',
   'price' => 12,
+  'capacity' => 10
   })
 screening8.save()
 

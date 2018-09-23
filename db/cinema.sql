@@ -20,7 +20,8 @@ CREATE TABLE screenings (
   id SERIAL4 PRIMARY KEY,
   film_id INT4 REFERENCES films(id) ON DELETE CASCADE,
   start_time VARCHAR(255),
-  price INT4
+  price INT4,
+  capacity INT4
 );
 
 

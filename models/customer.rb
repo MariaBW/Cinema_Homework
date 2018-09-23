@@ -40,11 +40,15 @@ class Customer
 
   def buy_ticket(screening)
     #create ticket object for that customer and screening
-    ticket = Ticket.new({ 'customer_id' => @id, 'screening_id' => screening.id})
-    ticket.save()
+    if screening.count_customers < screening.capacity()
+      ticket = Ticket.new({ 'customer_id' => @id, 'screening_id' => screening.id})
 
-    #decrease customer funds by price of screening.
-    @funds -= screening.price
+      ticket.save()
+
+      #decrease customer funds by price of screening.
+      @funds -= screening.price
+    else
+    end
   end
 
   def show_films()
