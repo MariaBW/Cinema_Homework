@@ -36,6 +36,15 @@ class Customer
     values = [@id]
     screenings = SqlRunner.run(sql, values)
     return screenings.map { |screening| Screening.new(screening) }
+  end
+
+  def buy_ticket(screening)
+    #create ticket object for that customer and screening
+    ticket = Ticket.new({ 'customer_id' => @id, 'screening_id' => screening.id})
+    ticket.save()
+
+    #decrease customer funds by price of screening.
+    @funds -= screening.price
   end 
 
 

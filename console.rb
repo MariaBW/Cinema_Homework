@@ -299,6 +299,8 @@ ticket14.save()
 
 # ticket14.delete() - this works
 
+customer3.buy_ticket(screening5)
+
 
 binding.pry
 nil
