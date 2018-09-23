@@ -45,7 +45,16 @@ class Customer
 
     #decrease customer funds by price of screening.
     @funds -= screening.price
-  end 
+  end
+
+  def show_films()
+    #call the screenings function
+    screenings_array = self.show_screenings()
+    #for each film_id in the list of screenings, show the film object
+    for screening in screenings_array do Film.find_by_id(screening["film_id"])#this for loop throws an error to do with the data passed in to Film.find_by_id().
+    end
+  end
+
 
 
   def self.delete_all()
