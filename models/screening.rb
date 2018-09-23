@@ -39,6 +39,10 @@ class Screening
     return customers.map { |customer| Customer.new(customer)}
   end
 
+  def count_customers()
+    return self.show_customers.count()
+  end
+
 
   def self.delete_all()
     sql = "DELETE FROM screenings"

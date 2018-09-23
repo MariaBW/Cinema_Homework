@@ -55,6 +55,13 @@ class Customer
     end
   end
 
+  def count_tickets()
+    sql = "SELECT * FROM tickets WHERE tickets.customer_id = $1"
+    values = [@id]
+    tickets = SqlRunner.run(sql,values)
+    return tickets.count()
+  end
+
 
 
   def self.delete_all()
